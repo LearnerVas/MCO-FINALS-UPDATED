@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.topnav { /*declare the container you want to edit, 
+    for example nav=class"topnav"*/
+    justify-content: space-between; /*Justify objects*/
+    align-items: center; /*Justify objects*/
+    background-color: #333333; /*For color, click the
+    color to change whatever color you want and pick 
+    its opacity*/
+    color: white;
+    padding: 10px 20px;
+    width: 170vh;
+    height: 15vh;
+    position: absolute;/*The position is absoulute,
+    meaning you must manually edit the position
+    of the objects*/
+    left:200px;
+  
+}
+.topnav .search-bar { /*Declare a class inside a class*/
+    width: 100%;
+    max-width: 200px;
+    padding: 5px;
+    position:absolute;
+    left:180px;
+    bottom: 45px;
+}
+.topnav .logo {
+    position:absolute;
+    bottom:9px;
+}
+.topnav .profile {
+    display: flex;
+    align-items: center;
+    position:absolute;
+    right:0px;
+    bottom:30px;
+    margin-right: 1.5em;
+}
+
+.topnav .profile img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-left: 0.5em;
+}
+main {
+    width: 80%;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+header .welcome h1 {
+    margin: 0;
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+}
+header .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 0.5em;
+}
+
+.overview {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+.overview .box {
+    height: 150px;
+    width: 150px;
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #000000c7;
+    color: white;
+    padding-top: 20px;
+    position:absolute;
+}
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.sidebar a:hover {
+    background-color: #575757;
+}
+/* General Styles */
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: inline-block;
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #000000c7;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown Item Styles */
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #080808;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+/* Arrow for Dropdown Toggle */
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid black;
+    border-bottom: 0;
+    border-left: 0.3em solid black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .nav-item {
+        display: block;
+        width: 100%;
+    }
+    .nav-link {
+        display: block;
+        width: 100%;
+    }
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+.hidden {
+    display: none;
+}
+img{
+    border-radius: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    background-color: #333333c7;
+}
